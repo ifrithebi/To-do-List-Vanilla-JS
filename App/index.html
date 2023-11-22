@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>To do list ☕</h1>
+    <div id="container">
+        <div id="header">
+            <input id="input" type="text" value="Add a note">
+            <button id="button">Add note</button>
+        </div>
+        <span></span>
+        <div id="notes">
+
+        </div>
+    </div>
+    <script>
+    let note = document.getElementById("input")
+    let addNote = document.getElementById("button")
+    let noteAdded = document.getElementById("notes")
+
+    addNote.addEventListener("click", function(){
+    let noteContent = note.value
+    console.log(noteContent)
+    let notatka = noteAdded.innerHTML+= `<div class="note"><div class="text">`+noteContent+`</div><button class="deleteNote">X</button></div>`
+})
+
+    noteAdded.addEventListener("click", function(e){
+    if(e.target && e.target.classList.contains("deleteNote")) {
+        e.target.parentElement.remove();
+    }
+})
+
+window.onload = function() {
+    var input = document.querySelector('input');
+    var defaultValue = input.value;
+    input.onfocus = function(){
+        if(this.value === defaultValue) {
+            this.value = '';
+        }
+    };
+    input.onblur = function(){
+        if(this.value === '') {
+            this.value = defaultValue;
+        }
+    }
+};
+    
+
+
+    </script>
+</body>
+</html>

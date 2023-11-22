@@ -1,0 +1,124 @@
+:root{
+    background-color: rgb(255, 255, 255);
+    color: white;
+    background: linear-gradient(to right, rgb(112, 146, 255), rgb(58, 58, 165));
+    font-family: Poppins;
+    font-weight: 600;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+#container{
+    display: flex;
+    flex-direction: column;
+    width: 1200px;
+    min-height: 500px;
+    max-width: 100%;
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    padding: 50px;
+}
+
+#header{
+    position: relative;
+}
+
+input{
+    width: 800px;
+    height: 80px;
+    border-radius: 50px;
+    color: #1c1c1c;
+    background-color: rgb(211, 211, 211);
+    border: none;
+    font-size: 18px;
+    box-shadow: 0 0 15px 4px rgba(0,0,0,0.06);
+    font-family: Poppins;
+    font-size: 20px;
+    font-weight: 500;
+    padding-left: 50px;
+}
+
+input:focus{
+    width: 800px;
+    height: 80px;
+    border-radius: 50px;
+    background-color: rgb(211, 211, 211);
+    outline: none;
+    font-family: Poppins;
+    font-size: 20px;
+    font-weight: 500;
+    padding-left: 50px;
+    color: #1c1c1c;
+}
+
+#button{
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 200px;
+    height: 80px;
+    background-color: rgb(179, 131, 255);
+    color: white;
+    font-family: Poppins;
+    font-size: 30px;
+    font-weight: 500;
+    border-radius: 50px;
+    border: none;
+}
+
+#button:hover{
+    background-color: rgb(162, 104, 255);
+    cursor: pointer;
+}
+
+#notes{
+    color: #1c1c1c;
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.note{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: rgb(241, 241, 241);
+    border-radius: 35px;
+    font-size: 20px;
+    padding: 30px;
+    margin-top: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1), 
+    0 10px 20px rgba(0,0,0,0.08), 
+    0 15px 25px rgba(0,0,0,0.06), 
+    0 20px 30px rgba(0,0,0,0.04);
+    max-width: 400px;
+    margin: 20px;
+}
+
+.note button{
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    background-color: rgb(179, 131, 255);
+    color: white;
+    font-family: Poppins;
+    font-size: 20px;
+    font-weight: 500;
+    border-radius: 50%;
+    border: none;
+    margin-left: 20px;
+}
+
+.note .text{
+    flex-grow: 1;
+    overflow: inherit;
+}
+
+.note button:hover{
+    background-color: rgb(162, 104, 255);
+    cursor: pointer;
+}
